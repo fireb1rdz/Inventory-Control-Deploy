@@ -46,6 +46,7 @@ class SupplierCreateView(LoginRequiredMixin, CreateView):
     def get_context_data(self, **kwargs: Any):
         context =  super().get_context_data(**kwargs)
         context["form_action"] = reverse("suppliers:create")
+        return context
     
 
 class SupplierUpdateView(LoginRequiredMixin, UpdateView):
